@@ -2,8 +2,8 @@ var canvas;
 var canvasContext;
 var ballX = 50;
 var ballY = 50;
-var ballSpeedX = 5;
-var ballSpeedY = 2;
+var ballSpeedX = 10;
+var ballSpeedY = 4;
 
 var player1Score =0;
 var player2Score =0;
@@ -39,7 +39,7 @@ window.onload = function(){
 	canvas = document.getElementById('gameCanvas');
 	canvasContext = canvas.getContext('2d');
 	
-	var framesPerSecond =60;
+	var framesPerSecond =30;
 	setInterval(function(){
 		moveEverything();
 		drawEverything();
