@@ -60,10 +60,18 @@ window.onload = function(){
 	canvas.addEventListener('mousedown',handleMouseTouchClick);
 	canvas.addEventListener('touchstart',handleMouseTouchClick);
 	
+	canvas.addEventListener('scroll',function(evt){
+		window.scrollTo(0, 0);
+		evt.preventDefault();
+		evt.stopPropagation();
+	});
 	canvas.addEventListener('mousemove',
 		function(evt){
 			var mousePos = calculateMouseTouchPos(evt);
 			paddle1Y = mousePos.y - (PADDLE_HEIGHT/2);
+			window.scrollTo(0, 0);
+			evt.preventDefault();
+			evt.stopPropagation();
 			//paddle2Y = mousePos.y - (PADDLE_HEIGHT/2);
 	});
 
