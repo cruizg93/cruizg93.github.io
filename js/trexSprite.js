@@ -188,7 +188,13 @@ function __main__(){
         worldLogic();
         drawGround();
         drawSun();
-        ctx.font = "12px Arial";
+
+        if(sunCount % 2 ==0){
+            ctx.font = "12px Arial";
+        }else{
+            ctx.font = "14px Arial";
+        }
+        
         ctx.strokeText("By Cruizg93",200,220);
     },1000/FPS);
 }
